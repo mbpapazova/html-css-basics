@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="This is a website.">
+        <meta name="viewpoint" content="width=device-width, initil-scale=1.0">
+        <title>MM's first website</title>
+         <!--css block-->
+         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+         <style>
+
+            body {
+                background-color: rgb(236, 152, 243);
+                color: black;
+                
+            }
+
+            .lobster-text {
+                font-family: Lobster;
+            }
+
+            [type='password'] {
+                margin: 10px;
+            }
+            [type='text'] {
+                padding: 0.1em 0em 0.1em 1.5em;
+            }
+            /* по подразбиране, цвета на параграфите*/
+            /*id of elements*/
+            #characters {
+                background-color: lightsalmon;
+                padding: 0px 0px 0px 250px;
+                margin: 50px;
+            }
+            .silver-background {
+                background-color: silver;
+            }
+            .thick-green-border {
+                border-color: darkblue;
+                border-width: 3px;
+                border-style: solid;
+                /*rounder edges
+                border-radius: 10px;*/
+                border-radius: 50%;
+            }
+            p {
+                color: red !important;
+                font-size: 16px;
+                font-family: mon;
+            }
+        /*css class, променя цвета на класа blue-text на син*/
+            .blue-text{ 
+                color: blue;
+                font-size: 30px;
+
+            }
+            h1 {
+                font-family: Lobster;
+                background-color: aquamarine;
+                text-align: center;
+                
+            }
+            .naruto {
+                width: 300px;
+            }
+
+            .d1{background: lightskyblue;
+                grid-area: header;
+            }
+            .d2{background: lightsalmon;
+               /* justify-self: left;
+                align-self: end;*/
+                grid-area: advert;
+            }
+            .d3{background: paleturquoise;
+                grid-area: content;
+                display: grid;
+                grid-template-columns: auto 1fr;
+
+               
+            }
+            .d4{background: lightpink;
+                grid-area: footer;
+            }
+            .d5{background: palegreen;
+                grid-area: content;
+            }
+
+            .container {
+                display: flex;
+                font-size: 1.5em;
+                min-height: 300px;
+                width: 100%;
+                background: lightgray;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50px auto 1fr suto ;
+               /* grid-gap: 5px;*/
+               column-gap: 10px;
+               /*justify-items: center;*/
+              /* align-items: end;*/
+                grid-template-areas: 
+                "header"
+                "advert"
+                "content"
+                "content"
+                "footer";
+            
+            }
+            @media(min-width: 300px) {
+                .container {
+                    grid-template-columns: auto 1fr ;
+                    grid-template-rows: auto 1fr 1fr auto;
+                    grid-template-areas: 
+                    "advert header"
+                    "advert content"
+                    "advert content"
+                    "advert footer";
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="lobster-text" id="heading">Hello!</h1>
+            <hr/>
+        <!--bold, italic, underlined-->
+            <article>
+                <section>
+                    <p class="blue-text"><u>This</u> is a <i><b>paragraph</b></i> 1</p>
+                </section>
+        <!--Big and small words-->
+                <section>
+                    <p><big>This</big> is a <small>paragraph</small> 2</p>
+                </section>
+        <!-- index -->
+            <aside>
+                <p>H<sub>2</sub>O</p>
+                <p>10<sup>2</sup></p>
+                <!--<ul> - unordered list, <ol> = ordered list-->
+                <ol id="characters" type="I">
+                    <li><a href="https://static.wikia.nocookie.net/naruto-fairy-tail-bleach-and-fullmetal-alchemist/images/8/8b/Hinata_Hy%C5%ABga.png/revision/latest?cb=20151111144033" target="_blank">Hinata</a></li>
+                    <li><a href="https://static.wikia.nocookie.net/naruto/images/d/dd/Naruto_Uzumaki%21%21.png/revision/latest?cb=20161013233552" target="_blank">Naruto</a></li>
+                </ol>
+
+                <dl>
+                <dl>Sasuke</dl>
+                    <dd>He is evil</dd>
+                </dl>
+
+                <table class="silver-background">
+                    <thead>
+                    <caption><b>Naruto chacaters</b></caption>
+                    <tr>
+                        <th>girls</th>
+                        <th>boys</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="d2" colspan="1">hinata</td>
+                        <td class="d1">naruto</td>
+                    </tr>
+                    <tr>
+                        <td class="d4">sakura</td>
+                        <td class="d3">sasuke</td>
+                    </tr>
+                </tbody>
+                </table>
+            </aside>
+            </article>
+            <hr/>
+
+            <span>span1</span>
+            <span>span2</span>
+            <div>block of info1</div>
+            <div>block of info2</div>
+            
+            <input style="color: gray" type="text" value="Enter your username"/>
+            <input style="color: gray" type="password" value="password"/>
+            <input style="color: gray" type="date" value="Enter your username"/>
+            <input style="color: gray" type="file" value="password"/>
+            <br/>
+            <textarea style="color: gray;" rows="10" cols="20">Enter a paragraph</textarea>
+            
+            <hr/>
+            <div class="container">
+
+                <div class="d1">1</div>
+                <div class="d2">2</div>
+                <div class="d3">3</div>
+                <div class="d4">4</div>
+                <div class="d5">5</div>
+
+            </div>
+
+            <h2 class="lobster-text">Style and Colors</h2>
+                <p style="color: red; background-color:aquamarine;">
+                     You can style yout HTML style and colors</p>
+        <!--Link, image and video-->
+           <a href="https://www.google.com" target="_blank"><h3>Google</h3></a>
+           <!--<a href="hi.jpg" target="_blank">Cute</a>-->
+            <img class="naruto thick-green-border" src="hi.jpg" alt="Naturo and Hinata">
+
+            <hr/>
+            <video width="400" src="VID_20190917_104331.mp4" poster="hi.jpg" controls></video>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8tl0NSpSI3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <iframe class="site" width="1200" height="600" frameborder="0" src="https://naruto.fandom.com/wiki/Naruto_Uzumaki">Sorry</iframe>
+        </main>
+
+        <hr/>
+        <footer>
+            	<p><small>By MP</small></p>
+        </footer>
+    </body>
+</html>
